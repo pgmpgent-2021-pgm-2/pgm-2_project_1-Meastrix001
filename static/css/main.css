@@ -246,8 +246,8 @@ width: fit-content;
   font-size: 0.9rem;
 }
 .git_user-repos-ul section{
-  width: 50%;
-  margin: auto;
+  width: 45%;
+  margin-left: 1rem;
 }
 .git_user-repos-ul svg {
   fill: blue;
@@ -344,9 +344,9 @@ button{
  position: relative;
  background-color: none;
 }
-.user_specific-followers-info.open:nth-child(2n+1)
+.user_specific-followers-info.open:nth-child(2n+1),
 .user_specific-followers-info:nth-child(2n+1){
-  background-color: none;
+  background-color: #161b21;
 }
 .user_specific-followers-info img{
   width: 10rem;

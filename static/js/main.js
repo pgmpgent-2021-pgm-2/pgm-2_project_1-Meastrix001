@@ -1,4 +1,4 @@
-const GET_WEATHER_API = 'http://api.weatherapi.com/v1/current.json?key=352d093325924260b28150556201912&q=Ghent';
+const GET_WEATHER_API = 'https://api.weatherapi.com/v1/current.json?key=352d093325924260b28150556201912&q=Ghent';
 const GET_COVID_CASES_API = 'https://data.stad.gent/api/records/1.0/search/?dataset=dataset-of-cumulative-number-of-confirmed-cases-by-municipality&q=';
 let username = document.getElementById('search_field').val;
 let noUsername = `test`
