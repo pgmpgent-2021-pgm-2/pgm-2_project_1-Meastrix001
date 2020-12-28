@@ -1,0 +1,106 @@
+
+[{
+      "firstName": "Evelien",
+      "LastName": "Rutsaert",
+      "email": "",
+      "thumbnail": "./static/media/evelien.jpg",
+      "lijfspruek": "Leef niet om te werken, maar werk om te leven",
+      "portfolio": {
+        "Github": "evelienrutsaert",
+        "LinkedIn": "evelien-rutsaert"
+      },
+      "teacher": true,
+      "geboortedatum": "631148400000"
+    },
+    {
+      "firstName": "Michael",
+      "LastName": "Vanderpoorten",
+      "email": "hello@yungpanda.com",
+      "thumbnail": "./static/media/michael.jpg",
+      "lijfspruek": "Vraag niet hoe het kan, maar geniet er van",
+      "portfolio": {
+        "Github": "yungpanda",
+        "LinkedIn": "yungpanda"
+      },
+      "teacher": true,
+      "geboortedatum": "631188400000"
+    },
+    {
+      "firstName": "jaimy",
+      "LastName": "vangyseghem",
+      "email": "jaimy.vangyseghem@gmail.com",
+      "thumbnail": "./static/media/jaimy.jpg",
+      "lijfspruek": "Vraag niet hoe het kan, maar geniet er van",
+      "portfolio": {
+        "Github": "JaimyVanGyseghem",
+        "LinkedIn": "jaimy-van-gyseghem"
+      },
+      "teacher": false,
+      "geboortedatum": "631148880000"
+    },
+    {
+      "firstName": "mathieu",
+      "LastName": "spillebeen",
+      "email": "mathieu.spillebeen@gmail.com",
+      "thumbnail": "./static/media/mathieu.jpg",
+      "lijfspruek": "Wie niet waagt, wie niet wint",
+      "portfolio": {
+        "Github": "mathieuspil",
+        "LinkedIn": "mathieuspil"
+      },
+      "teacher": true,
+      "geboortedatum": "636548400000"
+    },
+    {
+      "firstName": "Jeroen",
+      "LastName": "Dewelde",
+      "email": "",
+      "thumbnail": "./static/media/jeroen.jpg",
+      "lijfspruek": "Geen zorgen voor morgen",
+      "portfolio": {
+        "Github": "",
+        "LinkedIn": "jeroen-dewelde"
+      },
+      "teacher": false,
+      "geboortedatum": "633348400000"
+    },
+    {
+      "firstName": "Thibault",
+      "LastName": "Fouquaert",
+      "email": "thibault.fouquaert@gmail.com",
+      "thumbnail": "./static/media/thibault.jpg",
+      "lijfspruek": " A goal without a plan is merely an idea.",
+      "portfolio": {
+        "Github": "Thibaultfq",
+        "LinkedIn": "thibault-fouquaert"
+      },
+      "teacher": true,
+      "geboortedatum": "631111100000"
+    },
+    {
+      "firstName": "Philippe",
+      "LastName": "De Pauw Waterschoot",
+      "email": "drdynscript@gmail.com",
+      "thumbnail": "./static/media/philippe.png",
+      "lijfspruek": "We ❤️ Programming 👍 Graphics make Cool 💩",
+      "portfolio": {
+        "Github": "drdynscript",
+        "LinkedIn": "philippe-de-pauw-waterschoot"
+      },
+      "teacher": true,
+      "geboortedatum": "598748400000"
+    },
+    {
+      "firstName": "tolunay",
+      "LastName": "kutlu",
+      "email": "",
+      "thumbnail": "./static/media/tolunay.jpg",
+      "lijfspruek": "",
+      "portfolio": {
+        "Github": "tolunay-kutlu",
+        "LinkedIn": "tolunay-kutlu"
+      },
+      "teacher": false,
+      "geboortedatum": "63117770000"
+    }
+  ]

@@ -3,10 +3,100 @@
 dark blue color : #0d1017
 in between blues : #161b21
  */
+ * {
+   color:  white;
+   padding-inline-start: 0;
+ }
+ /* track */
+ *::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+ *::-webkit-scrollbar-track {
+  background:  #0d1017; 
+}
+/* handle */
+*::-webkit-scrollbar-thumb {
+  background: #59a6ff; 
+  border-radius: 20px; 
+}
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+ li {
+  display: flex;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  align-items: center;
+  cursor: pointer;
+ }
+ li:nth-child(2n+1) {
+   background-color: #0d1017;
+ }
+ img {
+  width: 4rem;
+  height: 4rem;
+  margin-left: 1rem;
+ }
 body {
   margin: 0px; 
   height: 100%;
   background-color: #0d1017;
+}
+.git_user.open,
+.pgm_team-list.open,
+.git_search.open,
+.header.open{
+  background-color: gray;
+}
+.git_user-followers.open li:nth-child(2n+1),
+.git_user-repos.open li:nth-child(2n+1),
+.git_search-result.open li:nth-child(2n+1),
+.pgm_team-list.open li:nth-child(2n+1){
+  background-color: white;
+}
+body.open{
+  background-color: white;
+}
+.git_search.open,
+.git_user-details.open,
+.git_user-followers.open,
+.git_user-repos.open {
+  border: 2px solid black;
+}
+.git_user-followers.open,
+.git_user-repos.open {
+
+}
+body.open h2,
+body.open p{
+  color: black;
+}
+.theme_toggle {
+  width: 6rem;
+  height: 3rem;
+  background-color: #59a6ff;
+  position: absolute;
+  right: 40rem;
+  top: 1rem;
+  transform: translateX(10px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.theme_on,
+.theme_off{
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  border-radius: 50%;
+}
+.theme_on.open,
+.theme_off.open {
+  background-color: black;
 }
 h2{
   margin: 0;
@@ -21,6 +111,7 @@ html{
   height: 6rem;
   background-color: #161b21;
 }
+
 .header_wrapper {
   position: relative;
   width: 100%;
@@ -74,7 +165,7 @@ margin-left: 1.4rem;
 }
 .covid_cases p,
 .weather_in p {
-  font-size: 3rem;
+  font-size: 2.7rem;
   color: white;
   margin: 0;
 }
@@ -83,7 +174,7 @@ margin-left: 1.4rem;
   margin-right: 1rem;
 }
 .container{
-  height: 100%;
+  height: 106rem;
   display: flex;
   margin: auto;
   border-top: 2px solid #161b21;
@@ -131,13 +222,38 @@ width: fit-content;
   margin: 1rem;
 
 }
-.git_search-ul,
-.git_user-followers-ul {
+.pgm_team,
+.git_search{
+  overflow-x: overlay;
+}
+.git_search-result li p,
+.git_search-ul li p,
+.git_user-followers-ul li p{
+  width: fit-content;
+  font-size: 1.5rem;
+  margin: 0;
+  height: fit-content;
+  margin-left: 0.2rem;
 }
 .git_user-repos,
 .git_user-followers {
   border: 1px solid gray;
   margin-top: 1rem;
+  overflow-y: scroll;
+  height: 27rem
+}
+.git_user-repos-ul li h2{
+  font-size: 2rem;
+}
+.git_user-repos-ul li section p {
+  font-size: 0.9rem;
+}
+.git_user-repos-ul section{
+  width: 50%;
+  margin: auto;
+}
+.git_user-repos-ul svg {
+  fill: blue;
 }
 form{
   display: flex;
@@ -157,7 +273,7 @@ form{
   color: white;
   padding: 1rem;
 }
-#search_field-submit{
+button{
   width: 30%;
   height: 3rem;
   border: unset;
@@ -169,4 +285,20 @@ form{
 .pgm_team-list{
   height: 100%;
     padding-inline-start: 0;
+}
+.pgm_team-list li{
+  flex-direction: column;
+  align-items: unset;
+}
+.pgm_team-list li section:first-child{
+  display: flex;
+}
+.git_user-details-inner{
+  height: 50rem;
+}
+.user_image{
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
 }
