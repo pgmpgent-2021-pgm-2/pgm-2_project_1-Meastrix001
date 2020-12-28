@@ -50,7 +50,9 @@ body {
 .header.open{
   background-color: gray;
 }
-.git_user-followers.open li:nth-child(2n+1),
+.git_user-followers.open li:nth-child(2n+1){
+  background-color: unset;
+}
 .git_user-repos.open li:nth-child(2n+1),
 .git_search-result.open li:nth-child(2n+1),
 .pgm_team-list.open li:nth-child(2n+1){
@@ -65,21 +67,16 @@ body.open{
 .git_user-repos.open {
   border: 2px solid black;
 }
-.git_user-followers.open,
-.git_user-repos.open {
-
-}
 body.open h2,
 body.open p{
   color: black;
 }
 .theme_toggle {
-  width: 6rem;
+  width: 10rem;
   height: 3rem;
   background-color: #59a6ff;
   position: absolute;
   right: 40rem;
-  top: 1rem;
   transform: translateX(10px);
   display: flex;
   justify-content: space-around;
@@ -174,7 +171,7 @@ margin-left: 1.4rem;
   margin-right: 1rem;
 }
 .container{
-  height: 106rem;
+  height: 130rem;
   display: flex;
   margin: auto;
   border-top: 2px solid #161b21;
@@ -240,7 +237,7 @@ width: fit-content;
   border: 1px solid gray;
   margin-top: 1rem;
   overflow-y: scroll;
-  height: 27rem
+  height: 39rem
 }
 .git_user-repos-ul li h2{
   font-size: 2rem;
@@ -297,8 +294,68 @@ button{
   height: 50rem;
 }
 .user_image{
+  position: relative;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   height: 100%;
+}
+.user_image p {
+  text-align: center;
+  position: absolute;
+  bottom: -2rem;
+  width: 100%;
+  font-size: 2rem;
+  background-color: #4c4a4a8c;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.user_image h2{
+  position: absolute;
+  right: 0;
+  background-color: #4c4a4a8c;
+  padding: 2rem;
+  width: 14rem;
+  text-align: center;
+  font-size: 2.8rem;
+}
+.user_image h3{
+  position: absolute;
+  bottom: -1.2rem;
+  padding: 0.9rem;
+  background-color: #4c4a4a;
+}
+.user_image a svg{
+  fill: blue;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.git_user-followers-ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.user_specific-followers-info{
+  width: fit-content;
+  height: fit-content;
+ position: relative;
+ background-color: none;
+}
+.user_specific-followers-info.open:nth-child(2n+1)
+.user_specific-followers-info:nth-child(2n+1){
+  background-color: none;
+}
+.user_specific-followers-info img{
+  width: 10rem;
+  height: 10rem;
+  
+}
+.user_specific-followers-info section{
+  position: absolute;
+    bottom: 1.4rem;
+    left: 50%;
+    transform: translateX(-50%);
 }

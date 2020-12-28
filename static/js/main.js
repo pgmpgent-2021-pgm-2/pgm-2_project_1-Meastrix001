@@ -37,6 +37,8 @@ const USERS_API = 'data/pgm.json';
       this.$user_details  = document.querySelector('.git_user-followers')
       this.$toggleON = document.querySelector('.theme_on')
       this.$toggleOFF = document.querySelector('.theme_off')
+      this.$theme_on_mark = document.querySelector('.theme_on-mark')
+      this.$theme_off_mark = document.querySelector('.theme_off-mark')
     },
     buildUI() {
       this.$getCurrentWheater.innerHTML = this.getWheaterFromAPI();
@@ -57,7 +59,8 @@ const USERS_API = 'data/pgm.json';
           this.$user_details.classList.remove('open')
           this.$toggleON.classList.remove('open')
           this.$toggleOFF.classList.add('open')
-
+          this.$theme_on_mark.classList.remove('open')
+          this.$theme_off_mark.classList.add('open')
         } else {
           body.classList.add('open')
           this.$pgmTeamList.classList.add('open')
@@ -70,6 +73,8 @@ const USERS_API = 'data/pgm.json';
           this.$user_details.classList.add('open')          
           this.$toggleON.classList.add('open')
           this.$toggleOFF.classList.remove('open')
+          this.$theme_on_mark.classList.add('open')
+          this.$theme_off_mark.classList.remove('open')
         }
       })
     },
@@ -101,7 +106,7 @@ const USERS_API = 'data/pgm.json';
       this.$getCovidCases.innerHTML = `
       <p>${data.records[0].fields.cases}</p>`
     },
-    searchFunction() {
+    async searchFunction() {
       const githubAPI = new GitHubAPI();
       const $searchField = document.getElementById('searchResult')
       const $submitButton = document.getElementById('search_field')
@@ -109,11 +114,11 @@ const USERS_API = 'data/pgm.json';
         event.preventDefault();
         if ($submitButton.value.length) {
           const jsonFile = await githubAPI.getSearchFieldUsers($submitButton.value);
+          console.log('-=-=-=')
           const users = jsonFile.items.map(U => {
             return U
           })
           this.UpdateGitHubUsersResults(users);
-          // this.createHTMLforFollowers(users)
         }
       })
     },
@@ -224,29 +229,52 @@ const USERS_API = 'data/pgm.json';
       const team = pgmJSONfile
       this.createHTMLForPgmTeamFromJson(team)
     },
-    createHTMLForPgmTeamFromJson(team) {
+    async createHTMLForPgmTeamFromJson(team) {
       console.log(team)
       tempStr = "";
       team.map(member => {
         tempStr += `
-        <li class="user_specific-info" >
-        <section>
-        <img src="${member.thumbnail}"><p>${member.firstName} ${member.LastName}</p>
+        <li class="pgmTeam_click" data-id="${member.id}">
+        <section data-id="${member.id}">
+        <img src="${member.thumbnail}" data-id="${member.id}"><p>${member.firstName} ${member.LastName}</p>
         </section>
-        <section>
-        <p>${member.portfolio.Github}</p>
+        <section data-id="${member.id}">
+        <p data-id="${member.id}">${member.portfolio.Github}</p>
         </section>
         </li>`
-        let $userinfo = document.querySelectorAll('.user_specific-info')
-        $userinfo.forEach(user => {
-          user.addEventListener('click', (evt) => {
-            this.DatasetId = evt.target.dataset.id || evt.target.parentNode.dataset.id
-            this.createHTMLFromSpecificUSerFollower(users);
-          })
+        return this.$pgmTeamList.innerHTML = tempStr
+      }).join('')
+      let $userinfo = document.querySelectorAll('.pgmTeam_click')
+      $userinfo.forEach(user => {
+        user.addEventListener('click', (evt) => {
+          this.DatasetId = evt.target.dataset.id || evt.target.parentNode.dataset.id
+          this.createHTMLFrompgmTeamMembers(team);
         })
-
       })
-      return this.$pgmTeamList.innerHTML = tempStr
+    },
+    createHTMLFrompgmTeamMembers(team){
+      team.map(Us => {
+          if (Us.id == this.DatasetId) {
+            console.log('member ID ok!')
+            console.log(Us.firstName)
+            let Bday = new Date(Us.geboortedatum)
+            //get the year the team member was born
+            let birthYear = Bday.getUTCFullYear()
+            //use the member's birth year and substact the epoch tine year (1970)
+            let age = Math.abs(birthYear - 1970)
+            this.$userSpecifickDetails.innerHTML = `
+        <div class="user_image" style="background-image: url(${Us.thumbnail})">
+        <h2>${Us.teacher == true ? "Teacher" : "Student"}</h2>
+        <p>${Us.lijfspruek}</p>
+        <h3>${Us.firstName} ${Us.LastName} / ${age} Years Old</h3>
+        <a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M15.5 2.25a.75.75 0 01.75-.75h5.5a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0V4.06l-6.22 6.22a.75.75 0 11-1.06-1.06L19.94 3h-3.69a.75.75 0 01-.75-.75z"></path><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 010 1.5h-8.5a.25.25 0 00-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 00.25-.25v-8.5a.75.75 0 011.5 0v8.5a1.75 1.75 0 01-1.75 1.75H4.25a1.75 1.75 0 01-1.75-1.75V4.25z"></path></svg>
+        </a>
+        </div>
+        `
+        this.$gitHubRepositories.innerHTML = ``
+        this.$gitHubFollowers.innerHTML = ``
+      }
+      })
     },
     SpecificUSerFollowerClick(data) {
       let $userinfo = document.querySelectorAll('.user_specific-followers-info')

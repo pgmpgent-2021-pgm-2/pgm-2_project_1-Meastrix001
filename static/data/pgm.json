@@ -5,12 +5,13 @@
       "email": "",
       "thumbnail": "./static/media/evelien.jpg",
       "lijfspruek": "Leef niet om te werken, maar werk om te leven",
+      "id": "67511",
       "portfolio": {
         "Github": "evelienrutsaert",
         "LinkedIn": "evelien-rutsaert"
       },
       "teacher": true,
-      "geboortedatum": "631148400000"
+      "geboortedatum": 971148400000
     },
     {
       "firstName": "Michael",
@@ -18,12 +19,13 @@
       "email": "hello@yungpanda.com",
       "thumbnail": "./static/media/michael.jpg",
       "lijfspruek": "Vraag niet hoe het kan, maar geniet er van",
+      "id": "35304",
       "portfolio": {
         "Github": "yungpanda",
         "LinkedIn": "yungpanda"
       },
       "teacher": true,
-      "geboortedatum": "631188400000"
+      "geboortedatum": 941188400000
     },
     {
       "firstName": "jaimy",
@@ -31,12 +33,13 @@
       "email": "jaimy.vangyseghem@gmail.com",
       "thumbnail": "./static/media/jaimy.jpg",
       "lijfspruek": "Vraag niet hoe het kan, maar geniet er van",
+      "id": "38034",
       "portfolio": {
         "Github": "JaimyVanGyseghem",
         "LinkedIn": "jaimy-van-gyseghem"
       },
       "teacher": false,
-      "geboortedatum": "631148880000"
+      "geboortedatum": 631148880000
     },
     {
       "firstName": "mathieu",
@@ -44,12 +47,13 @@
       "email": "mathieu.spillebeen@gmail.com",
       "thumbnail": "./static/media/mathieu.jpg",
       "lijfspruek": "Wie niet waagt, wie niet wint",
+      "id": "22168",
       "portfolio": {
         "Github": "mathieuspil",
         "LinkedIn": "mathieuspil"
       },
       "teacher": true,
-      "geboortedatum": "636548400000"
+      "geboortedatum": 966548400000
     },
     {
       "firstName": "Jeroen",
@@ -57,12 +61,13 @@
       "email": "",
       "thumbnail": "./static/media/jeroen.jpg",
       "lijfspruek": "Geen zorgen voor morgen",
+      "id": "98594",
       "portfolio": {
         "Github": "",
         "LinkedIn": "jeroen-dewelde"
       },
       "teacher": false,
-      "geboortedatum": "633348400000"
+      "geboortedatum": 633348400000
     },
     {
       "firstName": "Thibault",
@@ -70,12 +75,13 @@
       "email": "thibault.fouquaert@gmail.com",
       "thumbnail": "./static/media/thibault.jpg",
       "lijfspruek": " A goal without a plan is merely an idea.",
+      "id": "14092",
       "portfolio": {
         "Github": "Thibaultfq",
         "LinkedIn": "thibault-fouquaert"
       },
       "teacher": true,
-      "geboortedatum": "631111100000"
+      "geboortedatum": 991111100000
     },
     {
       "firstName": "Philippe",
@@ -83,12 +89,13 @@
       "email": "drdynscript@gmail.com",
       "thumbnail": "./static/media/philippe.png",
       "lijfspruek": "We ❤️ Programming 👍 Graphics make Cool 💩",
+      "id": "70249",
       "portfolio": {
         "Github": "drdynscript",
         "LinkedIn": "philippe-de-pauw-waterschoot"
       },
       "teacher": true,
-      "geboortedatum": "598748400000"
+      "geboortedatum": 1149994000000
     },
     {
       "firstName": "tolunay",
@@ -96,11 +103,26 @@
       "email": "",
       "thumbnail": "./static/media/tolunay.jpg",
       "lijfspruek": "",
+      "id": "45436",
       "portfolio": {
         "Github": "tolunay-kutlu",
         "LinkedIn": "tolunay-kutlu"
       },
       "teacher": false,
-      "geboortedatum": "63117770000"
+      "geboortedatum": 699117770000
+    },
+    {
+      "firstName": "Kenny",
+        "LastName": "Casteleyn",
+        "email": "kenny.casteleyn@hotmail.com",
+        "thumbnail": "./static/media/Kenny.png",
+        "lijfspruek": "A smile makes people happy",
+        "id": "45439",
+        "portfolio": {
+            "Github": "pgm-kennycasteleyn",
+            "Linkedin": "kenny-casteleyn-4970711b7"
+        },
+        "teacher": false,
+        "geboortedatum": 741823200000
     }
   ]
