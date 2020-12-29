@@ -32,3 +32,13 @@ function GithubFollowers() {
     })
   }
 }
+function YTSearchApi(){
+  this.searchTroughyoutube = async (input) => {
+    return new Promise ((resolve, reject) => {
+      fetch(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyDfWJx4F08m0q4uL-7R3io88rgjXzF9foQ&part=snippet&maxResults=20&q=${input}`)
+      .then(response => response.json())
+      .then(json => resolve(json))
+      .catch(error => reject(error))
+    })
+  }
+}
