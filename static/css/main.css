@@ -61,6 +61,9 @@ body {
 body.open{
   background-color: white;
 }
+.header.open{
+  fill: black;
+}
 .git_search.open,
 .git_user-details.open,
 .git_user-followers.open,
